@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class GameStartIntro {
     private Scanner scanner;
-    public enum PlayableCharacters {Knight, Priest, Peasant}
+    public enum PlayableCharacters {KNIGHT, PRIEST, PEASANT}
 
     public GameStartIntro() {
         scanner = new Scanner(System.in);
@@ -22,14 +22,14 @@ public class GameStartIntro {
         }
 
         while(true) {
-        String input = scanner.nextLine();
+            String input = scanner.nextLine();
 
         try{
             PlayableCharacters selected = PlayableCharacters.valueOf(input.trim().toUpperCase());
             System.out.println("You have selected " + selected);
+            break;
         } catch (IllegalArgumentException e) {
-            System.out.println("Please select the available player class!");
-            askPlayerToChooseCharacter();
+            System.out.println("Please select the available player class!\n");
         }
 
     }
