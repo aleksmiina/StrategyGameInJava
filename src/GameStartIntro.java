@@ -15,12 +15,13 @@ public class GameStartIntro {
     }
 
     public void askPlayerToChooseCharacter(){
-        System.out.println("Choose your character: ");
+        System.out.println("Choose your character: \n");
 
         for(PlayableCharacters character : PlayableCharacters.values()){
             System.out.println(character + " \n");
         }
 
+        while(true) {
         String input = scanner.nextLine();
 
         try{
@@ -33,4 +34,5 @@ public class GameStartIntro {
 
     }
 
+ }
 }
