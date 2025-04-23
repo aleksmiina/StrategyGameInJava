@@ -27,6 +27,7 @@ public class GameStartIntro {
         try{
             PlayableCharacters selected = PlayableCharacters.valueOf(input.trim().toUpperCase());
             System.out.println("You have selected " + selected);
+            SelectedCharacterIntro selectedCharacterIntro = new SelectedCharacterIntro(selected);
             break;
         } catch (IllegalArgumentException e) {
             System.out.println("Please select the available player class!\n");
